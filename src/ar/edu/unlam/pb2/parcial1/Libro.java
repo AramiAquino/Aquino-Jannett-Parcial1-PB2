@@ -35,6 +35,15 @@ public class Libro {
 	public void setAutor(String autor) {
 		this.autor = autor;
 	}
+
+	public boolean disponibilidad() {
+		return true;
+	}
+
+	public void setDisponibilidad(boolean d) {
+		 d = Boolean.FALSE;
+		
+	}
 	
 	
 	

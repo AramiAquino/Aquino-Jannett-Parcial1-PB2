@@ -5,33 +5,30 @@ import java.util.List;
 
 public class Biblioteca {
 
-	List <Libro> libros;
-	List <Prestamo> prestamo;
+	List <Libro> libro;
+	private Integer Prestados;
 	
 	
 	public Biblioteca() {
-		libros = new ArrayList<>();
-		prestamo = new ArrayList();
+		libro = new ArrayList();
 	}
 
 
 	public List<Libro> getLibros() {
-		return libros;
+		return libro;
 	}
 
 
-	public void setLibros(List<Libro> libros) {
-		this.libros = libros;
+	public void setLibros(List<Libro> libro) {
+		this.libro = libro;
 	}
 
-
-	public void prestarLibro(Prestamo prestamo) {
-		for(int i=0; i < libros.size(); i++) {
-			if (libro != null) {
-				prestamo.add(prestamo);
-			}
-		}
-		if libro esta en la biblioteca 
-			libros.add(libro);
-	}
+	
+	public void solicitarPrestamoDeLibro(Libro libro) {
+        if(libro.disponibilidad() == true && this.libro.size() <= 2) {
+            this.libro.add(libro);
+            libro.setDisponibilidad(false);
+            Prestados++;
+        }
+    }
 }
