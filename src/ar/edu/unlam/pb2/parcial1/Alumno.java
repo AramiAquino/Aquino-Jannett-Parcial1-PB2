@@ -17,11 +17,13 @@ public class Alumno {
 		this.nombre = nombre;
 	}
 	
-	public void prestarLibro(Libro libro) {
+	public Boolean prestarLibro(Libro libro) {
         if(libro.disponibilidad() == true && this.libros.size() <= limitePrestamo ) {
             this.libros.add(libro);
             libro.setDisponibilidad(false);
+            return true;
         }
+        return false;
     }
 
     public List librosPrestados() {
